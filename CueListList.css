@@ -1,0 +1,123 @@
+div {
+  width: 500px;
+  margin: 10px
+}
+
+ul {
+  color: White;
+  list-style-type: none;
+}
+
+ul li {
+  position: relative;
+  font: bold italic 22px/1.7 Helvetica, Verdana, sans-serif;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  background: #34495E ;
+}
+
+ul li:nth-of-type(odd) {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  background: #283747;
+}
+
+h3 {
+  padding-left: 100px;
+  font: 16px/1.2 Helvetica, Verdana, sans-serif;
+  margin: 0px;
+}
+
+li p {
+  font: 12px/1.7 Helvetica, sans-serif;
+  padding-left: 100px;
+  color: #D0D3D4 ;
+  margin: 0;
+}
+
+li:hover {
+  background: #7D6608;
+  cursor: pointer;
+}
+
+li:hover:nth-of-type(odd) {
+  background: #7D6608;
+  cursor: pointer;
+}
+
+span {
+  position: absolute;
+}
+
+.scene_break {
+  background: yellow;	
+  font: 18px/1.7 Helvetica, Verdana, sans-serif;
+  color: black;
+}
+
+.scene_break:nth-of-type(odd) {
+  background: yellow;	
+  font: 18px/1.7 Helvetica, Verdana, sans-serif;
+  color: black;
+}
+
+li.live_cue {
+  border: 4px solid yellow;
+}
+
+.cue_af {
+    /*display: inline-block;*/
+	position: absolute;
+	background-color: #7E009A; /* Changing background color */
+    font-weight: bold; /* Making font bold */
+    border-radius: 5px; /* Making border radius */
+    width: auto; /* Making auto-sizable width */
+    height: auto; /* Making auto-sizable height */
+    padding: 0px 3px 0px 3px; /* Making space around letters */
+    font-size: 12px; /* Changing font size */  
+	top: 2px;
+    right: 4px;
+}
+
+.cue_fx {
+    display: inline-block;
+	background-color: #405040; /* Changing background color */
+    border-radius: 5px; /* Making border radius */
+    width: auto; /* Making auto-sizable width */
+    height: auto; /* Making auto-sizable height */
+    padding: 0px 3px 0px 3px; /* Making space around letters */
+    font-size: 10px; /* Changing font size */  
+}
+
+.cue_sc {
+    display: inline-block;
+	color: white;
+	background-color: #000080; /* Changing background color */
+    border-radius: 5px; /* Making border radius */
+    width: auto; /* Making auto-sizable width */
+    height: auto; /* Making auto-sizable height */
+    padding: 0px 3px 0px 3px; /* Making space around letters */
+    font-size: 10px; /* Changing font size */  
+}
+
+.cue_macro {
+    display: inline-block;
+	color: white;
+	background-color: green; /* Changing background color */
+    border-radius: 5px; /* Making border radius */
+    width: auto; /* Making auto-sizable width */
+    height: auto; /* Making auto-sizable height */
+    padding: 0px 3px 0px 3px; /* Making space around letters */
+    font-size: 10px; /* Changing font size */  
+}
+
+.cue_block {
+    display: inline-block;
+	color: black;
+	background-color: yellow; /* Changing background color */
+    border-radius: 5px; /* Making border radius */
+    width: auto; /* Making auto-sizable width */
+    height: auto; /* Making auto-sizable height */
+    padding: 0px 3px 0px 3px; /* Making space around letters */
+    font-size: 10px; /* Changing font size */  
+}

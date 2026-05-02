@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta charset="utf-8" /><title>NEO Control</title>
+<script src="/raphael.js" type="text/javascript" charset="utf-8"></script>
+<script src="/colorpicker.js" type="text/javascript" charset="utf-8"></script>
+<script src="/colorwheel.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+window.onload = function () {
+    var obj = document.getElementById("Command"),
+         reg = /^#(.)\1(.)\2(.)\3$/;
+	
+	var in_setting = 0;
+            
+    // this is where colorpicker created
+    var cp = Raphael.colorpicker(40,  window.innerHeight - 350, 300, "#%LAST_COLOR%");
+    var cp2 = Raphael.colorwheel(360, window.innerHeight - 350, 300, "#%LAST_COLOR%");
+      
+    // assigning onchange event handler
+    cp.onchange = function (clr) {
+		obj.value = "@ COLOR " + clr.replace(reg, "#$1$2$3");
+		cp2.color(clr);
+		if(in_setting == 0) {
+			in_setting = 1;
+			document.forms["form1"].submit();
+		}
+    };
+    cp2.onchange = function (clr) {
+		obj.value = "@ COLOR " + clr.replace(reg, "#$1$2$3");
+		cp.color(clr);
+		if(in_setting == 0) {
+			in_setting = 1;
+			document.forms["form1"].submit();
+		}
+    };
+};
+</script>
+</head>
+<body><div><h1 style="font-family:verdana"><img style="vertical-align:middle" alt="" src="/neo.png" /><span style="">NEO HTTP Server</span></h1></div>
+<p style="font-family:verdana">Welcome to the NEO web interface. </p>
+<p style="font-family:verdana">Use the edit field below to send commands to the system.</p>
+<p style="font-family:verdana">Current show name: %SHOW_NAME%<br>Selected Cue List: <a href="cue_list.html">%CUE_LIST_NAME%</a><br>Current Cue: %CURRENT_CUE_NO% - %CURRENT_CUE_NAME%</p>
+<p style="font-family:verdana">Last command result: %LAST_RESULT%</p>
+<form id="form1">
+<input id="Command" type="text" name="COMMAND" size="100%"/>
+<input id="Submit1" type="submit" value="Execute" />
+</form><p>
+<button type="submit" form="form1" name="COMMAND" value="sc 1">Shortcut 1</button>
+<button type="submit" form="form1" name="COMMAND" value="sc 2">Shortcut 2</button>
+<button type="submit" form="form1" name="COMMAND" value="sc 3">Shortcut 3</button>
+<button type="submit" form="form1" name="COMMAND" value="sc 4">Shortcut 4</button>
+<button type="submit" form="form1" name="COMMAND" value="sc 5">Shortcut 5</button>
+<button type="submit" form="form1" name="COMMAND" value="sc 6">Shortcut 6</button>
+<button type="submit" form="form1" name="COMMAND" value="sc 7">Shortcut 7</button>
+<button type="submit" form="form1" name="COMMAND" value="sc 8">Shortcut 8</button>
+<button type="submit" form="form1" name="COMMAND" value="sc 9">Shortcut 9</button>
+<button type="submit" form="form1" name="COMMAND" value="sc 10">Shortcut 10</button>
+</p>
+<p>
+<button type="button" onclick="location.href='buttons_group.html'">Group</button>
+<button type="button" onclick="location.href='buttons_pos.html'">Position</button>
+<button type="button" onclick="location.href='buttons_color.html'">Color</button>
+<button type="button" onclick="location.href='buttons_beam.html'">Beam</button>
+<button type="button" onclick="location.href='buttons_edge.html'">Edge</button>
+<button type="button" onclick="location.href='buttons_shortcuts.html'">Shortcuts</button>
+</p>
+<h2 style="font-family:verdana">NEO Task Schedular</h2>
+<p>
+%SCHEDULE%
+</p>
+<a href="http://www.strandlighting.com"><img alt="" src="/Strand_logo_black_RGB.png"/></a></p>
+</body>
+</html>

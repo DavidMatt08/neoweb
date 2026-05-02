@@ -1,0 +1,1052 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en-US"  class="supernova"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta property="og:title" content="Schedule Task Editor" >
+<meta property="og:description" content="Editing NEO/LightFactory schedule tasks." >
+<meta name="slack-app-id" content="AHNMASS8M">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1" />
+<meta name="HandheldFriendly" content="true" />
+<title>Schedule Task Editor</title>
+<link href="css/formCss.css?3.3.22976" rel="stylesheet" type="text/css" />
+<link type="text/css" rel="stylesheet" href="css/nova.css?3.3.22976" />
+<link type="text/css" media="print" rel="stylesheet" href="css/printForm.css?3.3.22976" />
+<link type="text/css" rel="stylesheet" href="css/54b929a4700cc4f2408b4567.css?themeRevisionID=5f8c6b412eb2f64f59529722"/>
+<link type="text/css" rel="stylesheet" href="css/payment_styles.css?3.3.22976" />
+<link type="text/css" rel="stylesheet" href="css/payment_feature.css?3.3.22976" />
+<style type="text/css">
+@import 'css1/genericTheme.css';
+
+    .form-label-left{
+        width:150px;
+    }
+    .form-line{
+        padding-top:12px;
+        padding-bottom:12px;
+    }
+    .form-label-right{
+        width:150px;
+    }
+    body, html{
+        margin:0;
+        padding:0;
+        background:#fff;
+    }
+
+    .form-all{
+        margin:0px auto;
+        padding-top:0px;
+        width:550px;
+        color:#555 !important;
+        font-family:'Didact Gothic';
+        font-size:18px;
+    }
+</style>
+
+<style type="text/css" id="form-designer-style">
+    /* Injected CSS Code */
+.form-label.form-label-auto {
+        
+        display: inline-block;
+        float: left;
+        text-align: right;
+      
+      }
+    /* Injected CSS Code */
+</style>
+
+<script src="js/prototype.forms.js" type="text/javascript"></script>
+<script src="js/jotform.forms.js?3.3.22976" type="text/javascript"></script>
+<script type="text/javascript">
+	JotForm.init(function(){
+if (window.JotForm && JotForm.accessible) $('input_4').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_7').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_6').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_10').setAttribute('tabindex',0);
+
+ JotForm.calendarMonths = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+ JotForm.calendarDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+ JotForm.calendarOther = {"today":"Today"};
+ var languageOptions = document.querySelectorAll('#langList li'); 
+ for(var langIndex = 0; langIndex < languageOptions.length; langIndex++) { 
+   languageOptions[langIndex].on('click', function(e) { setTimeout(function(){ JotForm.setCalendar("24", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":true,"past":true,"custom":false,"ranges":false,"start":"","end":""}); }, 0); });
+ } 
+ JotForm.setCalendar("24", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":true,"past":true,"custom":false,"ranges":false,"start":"","end":""});
+
+ JotForm.calendarMonths = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+ JotForm.calendarDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+ JotForm.calendarOther = {"today":"Today"};
+ var languageOptions = document.querySelectorAll('#langList li'); 
+ for(var langIndex = 0; langIndex < languageOptions.length; langIndex++) { 
+   languageOptions[langIndex].on('click', function(e) { setTimeout(function(){ JotForm.setCalendar("25", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":true,"past":true,"custom":false,"ranges":false,"start":"","end":""}); }, 0); });
+ } 
+ JotForm.setCalendar("25", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":true,"past":true,"custom":false,"ranges":false,"start":"","end":""});
+if (window.JotForm && JotForm.accessible) $('input_26').setAttribute('tabindex',0);
+	JotForm.newDefaultTheme = false;
+	JotForm.extendsNewTheme = false;
+	JotForm.newPaymentUIForNewCreatedForms = true;
+	JotForm.newPaymentUI = true;
+      JotForm.alterTexts(undefined);
+	JotForm.clearFieldOnHide="disable";
+	JotForm.submitError="jumpToFirstError";
+    /*INIT-END*/
+	});
+
+   JotForm.prepareCalculationsOnTheFly([null,{"name":"scheduleTask","qid":"1","text":"Schedule Task Editor","type":"control_head"},null,null,{"description":"","name":"id","qid":"4","subLabel":"","text":"ID","type":"control_textbox"},null,{"description":"","name":"name","qid":"6","subLabel":"","text":"Name","type":"control_textbox"},{"description":"","name":"priority","qid":"7","subLabel":"","text":"Priority","type":"control_textbox"},{"name":"action","qid":"8","text":"Action","type":"control_collapse"},{"description":"","name":"actionshortcut","qid":"9","subLabel":"","text":"Action (Shortcut)","type":"control_dropdown"},{"description":"","name":"macroCommand","qid":"10","subLabel":"","text":"Macro Command","type":"control_textbox"},{"name":"trigger","qid":"11","text":"Trigger","type":"control_collapse"},{"description":"","name":"daysOf","qid":"12","text":"Days of the week","type":"control_checkbox"},{"description":"","name":"monthsOf","qid":"13","text":"Months of the year","type":"control_checkbox"},{"description":"","name":"daysOf14","qid":"14","text":"Days of the month","type":"control_checkbox"},{"description":"","name":"weeksOf","qid":"15","text":"Weeks of the month","type":"control_checkbox"},{"description":"","name":"startAt","qid":"16","subLabel":"","text":"Start at","type":"control_dropdown"},{"description":"","name":"time","qid":"17","text":"Time","type":"control_time"},null,null,{"description":"","name":"input20","qid":"20","text":"","type":"control_checkbox"},null,null,{"name":"additionalOptions","qid":"23","text":"Additional Options","type":"control_collapse"},{"description":"","name":"startDate","qid":"24","text":"Start Date","type":"control_datetime"},{"description":"","name":"endDate","qid":"25","text":"End Date","type":"control_datetime"},{"description":"","name":"delayStart","qid":"26","subLabel":"Seconds (random delay)","text":"Delay Start up to","type":"control_textbox"},{"description":"","name":"repeatEvery","qid":"27","text":"Repeat every","type":"control_time"},{"description":"","name":"until","qid":"28","subLabel":"","text":"Until","type":"control_dropdown"},{"description":"","name":"untilFixed","qid":"29","text":"Until fixed time","type":"control_time"},{"description":"","name":"includeSpecial","qid":"30","subLabel":"","text":"Include special days","type":"control_dropdown"},{"description":"","name":"excludeSpecial","qid":"31","subLabel":"","text":"Exclude special days","type":"control_dropdown"},{"name":"savechanges","qid":"32","text":"Save Changes","type":"control_button"},null,null,{"name":"clickTo","qid":"35","text":"Click to edit this text...","type":"control_collapse"},{"name":"divider","qid":"36","type":"control_divider"},{"name":"cancel","qid":"37","text":"Cancel","type":"control_button"},{"name":"deletetask","qid":"38","text":"Delete Task","type":"control_button"}]);
+   setTimeout(function() {
+JotForm.paymentExtrasOnTheFly([null,{"name":"scheduleTask","qid":"1","text":"Schedule Task Editor","type":"control_head"},null,null,{"description":"","name":"id","qid":"4","subLabel":"","text":"ID","type":"control_textbox"},null,{"description":"","name":"name","qid":"6","subLabel":"","text":"Name","type":"control_textbox"},{"description":"","name":"priority","qid":"7","subLabel":"","text":"Priority","type":"control_textbox"},{"name":"action","qid":"8","text":"Action","type":"control_collapse"},{"description":"","name":"actionshortcut","qid":"9","subLabel":"","text":"Action (Shortcut)","type":"control_dropdown"},{"description":"","name":"macroCommand","qid":"10","subLabel":"","text":"Macro Command","type":"control_textbox"},{"name":"trigger","qid":"11","text":"Trigger","type":"control_collapse"},{"description":"","name":"daysOf","qid":"12","text":"Days of the week","type":"control_checkbox"},{"description":"","name":"monthsOf","qid":"13","text":"Months of the year","type":"control_checkbox"},{"description":"","name":"daysOf14","qid":"14","text":"Days of the month","type":"control_checkbox"},{"description":"","name":"weeksOf","qid":"15","text":"Weeks of the month","type":"control_checkbox"},{"description":"","name":"startAt","qid":"16","subLabel":"","text":"Start at","type":"control_dropdown"},{"description":"","name":"time","qid":"17","text":"Time","type":"control_time"},null,null,{"description":"","name":"input20","qid":"20","text":"","type":"control_checkbox"},null,null,{"name":"additionalOptions","qid":"23","text":"Additional Options","type":"control_collapse"},{"description":"","name":"startDate","qid":"24","text":"Start Date","type":"control_datetime"},{"description":"","name":"endDate","qid":"25","text":"End Date","type":"control_datetime"},{"description":"","name":"delayStart","qid":"26","subLabel":"Seconds (random delay)","text":"Delay Start up to","type":"control_textbox"},{"description":"","name":"repeatEvery","qid":"27","text":"Repeat every","type":"control_time"},{"description":"","name":"until","qid":"28","subLabel":"","text":"Until","type":"control_dropdown"},{"description":"","name":"untilFixed","qid":"29","text":"Until fixed time","type":"control_time"},{"description":"","name":"includeSpecial","qid":"30","subLabel":"","text":"Include special days","type":"control_dropdown"},{"description":"","name":"excludeSpecial","qid":"31","subLabel":"","text":"Exclude special days","type":"control_dropdown"},{"name":"savechanges","qid":"32","text":"Save Changes","type":"control_button"},null,null,{"name":"clickTo","qid":"35","text":"Click to edit this text...","type":"control_collapse"},{"name":"divider","qid":"36","type":"control_divider"},{"name":"cancel","qid":"37","text":"Cancel","type":"control_button"},{"name":"deletetask","qid":"38","text":"Delete Task","type":"control_button"}]);}, 20); 
+</script>
+</head>
+<body>
+<form class="jotform-form" action="schedule.html" method="post" name="form_schedule" id="210336399962060" accept-charset="utf-8" autocomplete="on">
+  <input type="hidden" name="formID" value="210336399962060" />
+  <input type="hidden" id="JWTContainer" value="" />
+  <input type="hidden" id="cardinalOrderNumber" value="" />
+  <div role="main" class="form-all">
+    <ul class="form-section page-section">
+      <li id="cid_1" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group  header-default">
+          <div class="header-text httal htvat">
+            <h2 id="header_1" class="form-header" data-component="header">
+              Schedule Task Editor
+            </h2>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_6">
+        <label class="form-label form-label-right form-label-auto" id="label_6" for="input_6"> Name </label>
+        <div id="cid_6" class="form-input">
+          <input type="text" id="input_6" name="sch_name" data-type="input-textbox" class="form-textbox" size="20" value="" data-component="textbox" aria-labelledby="label_6" />
+        </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_4">
+        <label class="form-label form-label-right form-label-auto" id="label_4" for="input_4">ID</label>
+        <div id="cid_4" class="form-input">
+          <input type="text" id="input_4" name="sch_id" data-type="input-textbox" class="form-textbox validate[Numeric]" size="5" value="" data-component="textbox" aria-labelledby="label_4" />
+        </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_7">
+        <label class="form-label form-label-right form-label-auto" id="label_7" for="input_7">Priority</label>
+        <div id="cid_7" class="form-input">
+          <input type="text" id="input_7" name="sch_priority" data-type="input-textbox" class="form-textbox validate[Numeric]" size="5" value="" data-component="textbox" aria-labelledby="label_7" />
+        </div>
+      </li>
+      <ul class="form-section-closed" style="height: 60px;clear:both;" id="section_8">
+        <li id="cid_8" class="form-input-wide" data-type="control_collapse">
+          <div class="form-collapse-table" id="collapse_8" data-component="collapse">
+            <span class="form-collapse-mid" id="collapse-text_8">Action</span>
+            <span class="form-collapse-right form-collapse-right-hide"></span>
+          </div>
+        </li>
+        <li class="form-line" data-type="control_dropdown" id="id_9">
+          <label class="form-label form-label-right form-label-auto" id="label_9" for="input_9"> Action (Shortcut) </label>
+          <div id="cid_9" class="form-input">
+            <select class="form-dropdown" id="input_9" name="q9_actionshortcut" style="width:150px" data-component="dropdown" aria-labelledby="label_9">
+%sch_action_list%
+            </select>
+          </div>
+        </li>
+        <li class="form-line" data-type="control_textbox" id="id_10">
+          <label class="form-label form-label-right form-label-auto" id="label_10" for="input_10"> Macro Command </label>
+          <div id="cid_10" class="form-input">
+            <input type="text" id="input_10" name="q10_macroCommand" data-type="input-textbox" class="form-textbox" size="20" value="" data-component="textbox" aria-labelledby="label_10" />
+          </div>
+        </li>
+      </ul>
+      <ul class="form-section-closed" style="height: 60px;clear:both;" id="section_11">
+        <li id="cid_11" class="form-input-wide" data-type="control_collapse">
+          <div class="form-collapse-table" id="collapse_11" data-component="collapse">
+            <span class="form-collapse-mid" id="collapse-text_11">
+              Trigger
+            </span>
+            <span class="form-collapse-right form-collapse-right-hide"></span>
+          </div>
+        </li>
+        <li class="form-line" data-type="control_checkbox" id="id_12">
+          <label class="form-label form-label-right" id="label_12" for="input_12"> Days of the week </label>
+          <div id="cid_12" class="form-input">
+            <div class="form-multiple-column" data-columncount="2" role="group" aria-labelledby="label_12" data-component="checkbox">
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_12_0" name="q12_daysOf[]" value="Monday" />
+                <label id="label_input_12_0" for="input_12_0"> Monday </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_12_1" name="q12_daysOf[]" value="Tuesday" />
+                <label id="label_input_12_1" for="input_12_1"> Tuesday </label>
+              </span>
+              <span class="form-checkbox-item" style="clear:left">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_12_2" name="q12_daysOf[]" value="Wednesday" />
+                <label id="label_input_12_2" for="input_12_2"> Wednesday </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_12_3" name="q12_daysOf[]" value="Thursday" />
+                <label id="label_input_12_3" for="input_12_3"> Thursday </label>
+              </span>
+              <span class="form-checkbox-item" style="clear:left">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_12_4" name="q12_daysOf[]" value="Friday" />
+                <label id="label_input_12_4" for="input_12_4"> Friday </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_12_5" name="q12_daysOf[]" value="Saturday" />
+                <label id="label_input_12_5" for="input_12_5"> Saturday </label>
+              </span>
+              <span class="form-checkbox-item" style="clear:left">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_12_6" name="q12_daysOf[]" value="Sunday" />
+                <label id="label_input_12_6" for="input_12_6"> Sunday </label>
+              </span>
+            </div>
+          </div>
+        </li>
+        <li class="form-line" data-type="control_checkbox" id="id_13">
+          <label class="form-label form-label-right form-label-auto" id="label_13" for="input_13"> Months of the year </label>
+          <div id="cid_13" class="form-input">
+            <div class="form-multiple-column" data-columncount="2" role="group" aria-labelledby="label_13" data-component="checkbox">
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_13_0" name="q13_monthsOf[]" value="January" />
+                <label id="label_input_13_0" for="input_13_0"> January </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_13_1" name="q13_monthsOf[]" value="February" />
+                <label id="label_input_13_1" for="input_13_1"> February </label>
+              </span>
+              <span class="form-checkbox-item" style="clear:left">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_13_2" name="q13_monthsOf[]" value="March" />
+                <label id="label_input_13_2" for="input_13_2"> March </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_13_3" name="q13_monthsOf[]" value="April" />
+                <label id="label_input_13_3" for="input_13_3"> April </label>
+              </span>
+              <span class="form-checkbox-item" style="clear:left">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_13_4" name="q13_monthsOf[]" value="May" />
+                <label id="label_input_13_4" for="input_13_4"> May </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_13_5" name="q13_monthsOf[]" value="June" />
+                <label id="label_input_13_5" for="input_13_5"> June </label>
+              </span>
+              <span class="form-checkbox-item" style="clear:left">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_13_6" name="q13_monthsOf[]" value="July" />
+                <label id="label_input_13_6" for="input_13_6"> July </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_13_7" name="q13_monthsOf[]" value="August" />
+                <label id="label_input_13_7" for="input_13_7"> August </label>
+              </span>
+              <span class="form-checkbox-item" style="clear:left">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_13_8" name="q13_monthsOf[]" value="September" />
+                <label id="label_input_13_8" for="input_13_8"> September </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_13_9" name="q13_monthsOf[]" value="October" />
+                <label id="label_input_13_9" for="input_13_9"> October </label>
+              </span>
+              <span class="form-checkbox-item" style="clear:left">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_13_10" name="q13_monthsOf[]" value="November" />
+                <label id="label_input_13_10" for="input_13_10"> November </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_13_11" name="q13_monthsOf[]" value="December" />
+                <label id="label_input_13_11" for="input_13_11"> December </label>
+              </span>
+            </div>
+          </div>
+        </li>
+        <li class="form-line" data-type="control_checkbox" id="id_14">
+          <label class="form-label form-label-right form-label-auto" id="label_14" for="input_14"> Days of the month </label>
+          <div id="cid_14" class="form-input">
+            <div class="form-multiple-column" data-columncount="4" role="group" aria-labelledby="label_14" data-component="checkbox">
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_14_0" name="q14_daysOf14[]" value="1" />
+                <label id="label_input_14_0" for="input_14_0"> 1 </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_14_1" name="q14_daysOf14[]" value="2" />
+                <label id="label_input_14_1" for="input_14_1"> 2 </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_14_2" name="q14_daysOf14[]" value="3" />
+                <label id="label_input_14_2" for="input_14_2"> 3 </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_14_3" name="q14_daysOf14[]" value="4" />
+                <label id="label_input_14_3" for="input_14_3"> 4 </label>
+              </span>
+              <span class="form-checkbox-item" style="clear:left">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_14_4" name="q14_daysOf14[]" value="5" />
+                <label id="label_input_14_4" for="input_14_4"> 5 </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_14_5" name="q14_daysOf14[]" value="6" />
+                <label id="label_input_14_5" for="input_14_5"> 6 </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_14_6" name="q14_daysOf14[]" value="7" />
+                <label id="label_input_14_6" for="input_14_6"> 7 </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_14_7" name="q14_daysOf14[]" value="8" />
+                <label id="label_input_14_7" for="input_14_7"> 8 </label>
+              </span>
+              <span class="form-checkbox-item" style="clear:left">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_14_8" name="q14_daysOf14[]" value="9" />
+                <label id="label_input_14_8" for="input_14_8"> 9 </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_14_9" name="q14_daysOf14[]" value="10" />
+                <label id="label_input_14_9" for="input_14_9"> 10 </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_14_10" name="q14_daysOf14[]" value="11" />
+                <label id="label_input_14_10" for="input_14_10"> 11 </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_14_11" name="q14_daysOf14[]" value="12" />
+                <label id="label_input_14_11" for="input_14_11"> 12 </label>
+              </span>
+              <span class="form-checkbox-item" style="clear:left">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_14_12" name="q14_daysOf14[]" value="13" />
+                <label id="label_input_14_12" for="input_14_12"> 13 </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_14_13" name="q14_daysOf14[]" value="14" />
+                <label id="label_input_14_13" for="input_14_13"> 14 </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_14_14" name="q14_daysOf14[]" value="15" />
+                <label id="label_input_14_14" for="input_14_14"> 15 </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_14_15" name="q14_daysOf14[]" value="16" />
+                <label id="label_input_14_15" for="input_14_15"> 16 </label>
+              </span>
+              <span class="form-checkbox-item" style="clear:left">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_14_16" name="q14_daysOf14[]" value="17" />
+                <label id="label_input_14_16" for="input_14_16"> 17 </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_14_17" name="q14_daysOf14[]" value="18" />
+                <label id="label_input_14_17" for="input_14_17"> 18 </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_14_18" name="q14_daysOf14[]" value="19" />
+                <label id="label_input_14_18" for="input_14_18"> 19 </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_14_19" name="q14_daysOf14[]" value="20" />
+                <label id="label_input_14_19" for="input_14_19"> 20 </label>
+              </span>
+              <span class="form-checkbox-item" style="clear:left">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_14_20" name="q14_daysOf14[]" value="21" />
+                <label id="label_input_14_20" for="input_14_20"> 21 </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_14_21" name="q14_daysOf14[]" value="22" />
+                <label id="label_input_14_21" for="input_14_21"> 22 </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_14_22" name="q14_daysOf14[]" value="23" />
+                <label id="label_input_14_22" for="input_14_22"> 23 </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_14_23" name="q14_daysOf14[]" value="24" />
+                <label id="label_input_14_23" for="input_14_23"> 24 </label>
+              </span>
+              <span class="form-checkbox-item" style="clear:left">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_14_24" name="q14_daysOf14[]" value="25" />
+                <label id="label_input_14_24" for="input_14_24"> 25 </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_14_25" name="q14_daysOf14[]" value="26" />
+                <label id="label_input_14_25" for="input_14_25"> 26 </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_14_26" name="q14_daysOf14[]" value="27" />
+                <label id="label_input_14_26" for="input_14_26"> 27 </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_14_27" name="q14_daysOf14[]" value="28" />
+                <label id="label_input_14_27" for="input_14_27"> 28 </label>
+              </span>
+              <span class="form-checkbox-item" style="clear:left">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_14_28" name="q14_daysOf14[]" value="29" />
+                <label id="label_input_14_28" for="input_14_28"> 29 </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_14_29" name="q14_daysOf14[]" value="30" />
+                <label id="label_input_14_29" for="input_14_29"> 30 </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_14_30" name="q14_daysOf14[]" value="31" />
+                <label id="label_input_14_30" for="input_14_30"> 31 </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_14_31" name="q14_daysOf14[]" value="Last" />
+                <label id="label_input_14_31" for="input_14_31"> Last </label>
+              </span>
+            </div>
+          </div>
+        </li>
+        <li class="form-line" data-type="control_checkbox" id="id_15">
+          <label class="form-label form-label-right form-label-auto" id="label_15" for="input_15"> Weeks of the month </label>
+          <div id="cid_15" class="form-input">
+            <div class="form-multiple-column" data-columncount="2" role="group" aria-labelledby="label_15" data-component="checkbox">
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_15_0" name="q15_weeksOf[]" value="1st" />
+                <label id="label_input_15_0" for="input_15_0"> 1st </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_15_1" name="q15_weeksOf[]" value="2nd" />
+                <label id="label_input_15_1" for="input_15_1"> 2nd </label>
+              </span>
+              <span class="form-checkbox-item" style="clear:left">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_15_2" name="q15_weeksOf[]" value="3rd" />
+                <label id="label_input_15_2" for="input_15_2"> 3rd </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_15_3" name="q15_weeksOf[]" value="4th" />
+                <label id="label_input_15_3" for="input_15_3"> 4th </label>
+              </span>
+              <span class="form-checkbox-item" style="clear:left">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_15_4" name="q15_weeksOf[]" value="5th" />
+                <label id="label_input_15_4" for="input_15_4"> 5th </label>
+              </span>
+              <span class="form-checkbox-item">
+                <span class="dragger-item">
+                </span>
+                <input type="checkbox" class="form-checkbox" id="input_15_5" name="q15_weeksOf[]" value="Last" />
+                <label id="label_input_15_5" for="input_15_5"> Last </label>
+              </span>
+            </div>
+          </div>
+        </li>
+        <li class="form-line form-line-column form-col-1" data-type="control_dropdown" id="id_16">
+          <label class="form-label form-label-top" id="label_16" for="input_16"> Start at </label>
+          <div id="cid_16" class="form-input-wide">
+            <select class="form-dropdown" id="input_16" name="q16_startAt" style="width:150px" data-component="dropdown" aria-labelledby="label_16">
+              <option value="Fixed Time"> Fixed Time </option>
+              <option value="Sunrise"> Sunrise </option>
+              <option value="Sunset"> Sunset </option>
+              <option value="Civil Dawn"> Civil Dawn </option>
+              <option value="Civil Dusk"> Civil Dusk </option>
+              <option value="Nautical Dawn"> Nautical Dawn </option>
+              <option value="Nautical Dusk"> Nautical Dusk </option>
+              <option value="Astronomical Dawn"> Astronomical Dawn </option>
+              <option value="Astronomical Dusk"> Astronomical Dusk </option>
+            </select>
+          </div>
+        </li>
+        <li class="form-line form-line-column form-col-2" data-type="control_time" id="id_17">
+          <label class="form-label form-label-top" id="label_17" for="input_17_hourSelect"> Time </label>
+          <div id="cid_17" class="form-input-wide">
+            <div data-wrapper-react="true">
+              <span class="form-sub-label-container" style="vertical-align:top">
+                <select class="time-dropdown form-dropdown" id="input_17_hourSelect" name="q17_time[hourSelect]" data-component="time-hour" aria-labelledby="label_17 sublabel_17_hour">
+                  <option value="0"> 00 </option>
+                  <option value="1"> 01 </option>
+                  <option value="2"> 02 </option>
+                  <option value="3"> 03 </option>
+                  <option value="4"> 04 </option>
+                  <option value="5"> 05 </option>
+                  <option value="6"> 06 </option>
+                  <option value="7"> 07 </option>
+                  <option value="8"> 08 </option>
+                  <option value="9"> 09 </option>
+                  <option value="10"> 10 </option>
+                  <option value="11"> 11 </option>
+                  <option value="12"> 12 </option>
+                  <option value="13"> 13 </option>
+                  <option value="14"> 14 </option>
+                  <option value="15"> 15 </option>
+                  <option value="16"> 16 </option>
+                  <option value="17"> 17 </option>
+                  <option value="18"> 18 </option>
+                  <option value="19"> 19 </option>
+                  <option value="20"> 20 </option>
+                  <option value="21"> 21 </option>
+                  <option value="22"> 22 </option>
+                  <option value="23"> 23 </option>
+                </select>
+                <span class="date-separate">
+                   :
+                </span>
+                <label class="form-sub-label" for="input_17_hourSelect" id="sublabel_17_hour" style="min-height:13px" aria-hidden="false"> Hour </label>
+              </span>
+              <span class="form-sub-label-container" style="vertical-align:top">
+                <select class="time-dropdown form-dropdown" id="input_17_minuteSelect" name="q17_time[minuteSelect]" data-component="time-minute" aria-labelledby="label_17 sublabel_17_minutes">
+                  <option value="00"> 00 </option>
+                  <option value="01"> 01 </option>
+                  <option value="02"> 02 </option>
+                  <option value="03"> 03 </option>
+                  <option value="04"> 04 </option>
+                  <option value="05"> 05 </option>
+                  <option value="06"> 06 </option>
+                  <option value="07"> 07 </option>
+                  <option value="08"> 08 </option>
+                  <option value="09"> 09 </option>
+                  <option value="10"> 10 </option>
+                  <option value="11"> 11 </option>
+                  <option value="12"> 12 </option>
+                  <option value="13"> 13 </option>
+                  <option value="14"> 14 </option>
+                  <option value="15"> 15 </option>
+                  <option value="16"> 16 </option>
+                  <option value="17"> 17 </option>
+                  <option value="18"> 18 </option>
+                  <option value="19"> 19 </option>
+                  <option value="20"> 20 </option>
+                  <option value="21"> 21 </option>
+                  <option value="22"> 22 </option>
+                  <option value="23"> 23 </option>
+                  <option value="24"> 24 </option>
+                  <option value="25"> 25 </option>
+                  <option value="26"> 26 </option>
+                  <option value="27"> 27 </option>
+                  <option value="28"> 28 </option>
+                  <option value="29"> 29 </option>
+                  <option value="30"> 30 </option>
+                  <option value="31"> 31 </option>
+                  <option value="32"> 32 </option>
+                  <option value="33"> 33 </option>
+                  <option value="34"> 34 </option>
+                  <option value="35"> 35 </option>
+                  <option value="36"> 36 </option>
+                  <option value="37"> 37 </option>
+                  <option value="38"> 38 </option>
+                  <option value="39"> 39 </option>
+                  <option value="40"> 40 </option>
+                  <option value="41"> 41 </option>
+                  <option value="42"> 42 </option>
+                  <option value="43"> 43 </option>
+                  <option value="44"> 44 </option>
+                  <option value="45"> 45 </option>
+                  <option value="46"> 46 </option>
+                  <option value="47"> 47 </option>
+                  <option value="48"> 48 </option>
+                  <option value="49"> 49 </option>
+                  <option value="50"> 50 </option>
+                  <option value="51"> 51 </option>
+                  <option value="52"> 52 </option>
+                  <option value="53"> 53 </option>
+                  <option value="54"> 54 </option>
+                  <option value="55"> 55 </option>
+                  <option value="56"> 56 </option>
+                  <option value="57"> 57 </option>
+                  <option value="58"> 58 </option>
+                  <option value="59"> 59 </option>
+                </select>
+                <label class="form-sub-label" for="input_17_minuteSelect" id="sublabel_17_minutes" style="min-height:13px" aria-hidden="false"> Minutes </label>
+                <input type="checkbox" class="form-checkbox" id="input_20_0" name="q20_neg_time[]" value="Negative Time" />
+                <label id="label_input_20_0" for="input_20_0"> Negative </label>
+              </span>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <ul class="form-section-closed" style="height: 60px;clear:both;" id="section_23">
+        <li id="cid_23" class="form-input-wide" data-type="control_collapse">
+          <div class="form-collapse-table" id="collapse_23" data-component="collapse">
+            <span class="form-collapse-mid" id="collapse-text_23">
+              Additional Options
+            </span>
+            <span class="form-collapse-right form-collapse-right-hide"></span>
+          </div>
+        </li>
+        <li class="form-line form-line-column form-col-1" data-type="control_datetime" id="id_24">
+          <label class="form-label form-label-top" id="label_24" for="lite_mode_24"> Start Date </label>
+          <div id="cid_24" class="form-input-wide">
+            <div data-wrapper-react="true">
+              <div style="display:none">
+                <span class="form-sub-label-container" style="vertical-align:top">
+                  <input type="tel" class="form-textbox validate[limitDate]" id="day_24" name="q24_startDate[day]" size="2" data-maxlength="2" data-age="" maxLength="2" value="" autoComplete="off" aria-labelledby="label_24 sublabel_24_day" />
+                  <span class="date-separate" aria-hidden="true">
+                     /
+                  </span>
+                  <label class="form-sub-label" for="day_24" id="sublabel_24_day" style="min-height:13px" aria-hidden="false"> Day </label>
+                </span>
+                <span class="form-sub-label-container" style="vertical-align:top">
+                  <input type="tel" class="form-textbox validate[limitDate]" id="month_24" name="q24_startDate[month]" size="2" data-maxlength="2" data-age="" maxLength="2" value="" autoComplete="off" aria-labelledby="label_24 sublabel_24_month" />
+                  <span class="date-separate" aria-hidden="true">
+                     /
+                  </span>
+                  <label class="form-sub-label" for="month_24" id="sublabel_24_month" style="min-height:13px" aria-hidden="false"> Month </label>
+                </span>
+                <span class="form-sub-label-container" style="vertical-align:top">
+                  <input type="tel" class="form-textbox validate[limitDate]" id="year_24" name="q24_startDate[year]" size="4" data-maxlength="4" data-age="" maxLength="4" value="" autoComplete="off" aria-labelledby="label_24 sublabel_24_year" />
+                  <label class="form-sub-label" for="year_24" id="sublabel_24_year" style="min-height:13px" aria-hidden="false"> Year </label>
+                </span>
+              </div>
+              <span class="form-sub-label-container" style="vertical-align:top">
+                <input type="text" class="form-textbox validate[limitDate, validateLiteDate]" id="lite_mode_24" size="12" data-maxlength="12" maxLength="12" data-age="" value="" data-format="ddmmyyyy" data-seperator="/" placeholder="dd/mm/yyyy" autoComplete="off" aria-labelledby="label_24" />
+                <img class=" newDefaultTheme-dateIcon icon-liteMode" alt="Pick a Date" id="input_24_pick" src="calendar.png" data-component="datetime" aria-hidden="true" data-allow-time="No" data-version="v1" />
+                <label class="form-sub-label" for="lite_mode_24" id="sublabel_24_litemode" style="min-height:13px" aria-hidden="false">  </label>
+              </span>
+            </div>
+          </div>
+        </li>
+        <li class="form-line form-line-column form-col-2" data-type="control_datetime" id="id_25">
+          <label class="form-label form-label-top" id="label_25" for="lite_mode_25"> End Date </label>
+          <div id="cid_25" class="form-input-wide">
+            <div data-wrapper-react="true">
+              <div style="display:none">
+                <span class="form-sub-label-container" style="vertical-align:top">
+                  <input type="tel" class="form-textbox validate[limitDate]" id="day_25" name="q25_endDate[day]" size="2" data-maxlength="2" data-age="" maxLength="2" value="" autoComplete="off" aria-labelledby="label_25 sublabel_25_day" />
+                  <span class="date-separate" aria-hidden="true">
+                     /
+                  </span>
+                  <label class="form-sub-label" for="day_25" id="sublabel_25_day" style="min-height:13px" aria-hidden="false"> Day </label>
+                </span>
+                <span class="form-sub-label-container" style="vertical-align:top">
+                  <input type="tel" class="form-textbox validate[limitDate]" id="month_25" name="q25_endDate[month]" size="2" data-maxlength="2" data-age="" maxLength="2" value="" autoComplete="off" aria-labelledby="label_25 sublabel_25_month" />
+                  <span class="date-separate" aria-hidden="true">
+                     /
+                  </span>
+                  <label class="form-sub-label" for="month_25" id="sublabel_25_month" style="min-height:13px" aria-hidden="false"> Month </label>
+                </span>
+                <span class="form-sub-label-container" style="vertical-align:top">
+                  <input type="tel" class="form-textbox validate[limitDate]" id="year_25" name="q25_endDate[year]" size="4" data-maxlength="4" data-age="" maxLength="4" value="" autoComplete="off" aria-labelledby="label_25 sublabel_25_year" />
+                  <label class="form-sub-label" for="year_25" id="sublabel_25_year" style="min-height:13px" aria-hidden="false"> Year </label>
+                </span>
+              </div>
+              <span class="form-sub-label-container" style="vertical-align:top">
+                <input type="text" class="form-textbox validate[limitDate, validateLiteDate]" id="lite_mode_25" size="12" data-maxlength="12" maxLength="12" data-age="" value="" data-format="ddmmyyyy" data-seperator="/" placeholder="dd/mm/yyyy" autoComplete="off" aria-labelledby="label_25" />
+                <img class=" newDefaultTheme-dateIcon icon-liteMode" alt="Pick a Date" id="input_25_pick" src="calendar.png" data-component="datetime" aria-hidden="true" data-allow-time="No" data-version="v1" />
+                <label class="form-sub-label" for="lite_mode_25" id="sublabel_25_litemode" style="min-height:13px" aria-hidden="false">  </label>
+              </span>
+            </div>
+          </div>
+        </li>
+        <li class="form-line" data-type="control_textbox" id="id_26">
+          <label class="form-label form-label-right" id="label_26" for="input_26"> Delay Start up to </label>
+          <div id="cid_26" class="form-input">
+            <span class="form-sub-label-container" style="vertical-align:top">
+              <input type="text" id="input_26" name="q26_delayStart" data-type="input-textbox" class="form-textbox validate[Numeric]" size="10" value="" data-component="textbox" aria-labelledby="label_26 sublabel_input_26" />
+              <label class="form-sub-label" for="input_26" id="sublabel_input_26" style="min-height:13px" aria-hidden="false"> Seconds (random delay) </label>
+            </span>
+          </div>
+        </li>
+        <li class="form-line" data-type="control_time" id="id_27">
+          <label class="form-label form-label-right form-label-auto" id="label_27" for="input_27_hourSelect"> Repeat every </label>
+          <div id="cid_27" class="form-input">
+            <div data-wrapper-react="true">
+              <span class="form-sub-label-container" style="vertical-align:top">
+                <select class="time-dropdown form-dropdown" id="input_27_hourSelect" name="q27_repeatEvery[hourSelect]" data-component="time-hour" aria-labelledby="label_27 sublabel_27_hour">
+                  <option>  </option>
+                  <option value="0"> 00 </option>
+                  <option value="1"> 01 </option>
+                  <option value="2"> 02 </option>
+                  <option value="3"> 03 </option>
+                  <option value="4"> 04 </option>
+                  <option value="5"> 05 </option>
+                  <option value="6"> 06 </option>
+                  <option value="7"> 07 </option>
+                  <option value="8"> 08 </option>
+                  <option value="9"> 09 </option>
+                  <option value="10"> 10 </option>
+                  <option value="11"> 11 </option>
+                  <option value="12"> 12 </option>
+                  <option value="13"> 13 </option>
+                  <option value="14"> 14 </option>
+                  <option value="15"> 15 </option>
+                  <option value="16"> 16 </option>
+                  <option value="17"> 17 </option>
+                  <option value="18"> 18 </option>
+                  <option value="19"> 19 </option>
+                  <option value="20"> 20 </option>
+                  <option value="21"> 21 </option>
+                  <option value="22"> 22 </option>
+                  <option value="23"> 23 </option>
+                </select>
+                <span class="date-separate">
+                   :
+                </span>
+                <label class="form-sub-label" for="input_27_hourSelect" id="sublabel_27_hour" style="min-height:13px" aria-hidden="false"> Hour </label>
+              </span>
+              <span class="form-sub-label-container" style="vertical-align:top">
+                <select class="time-dropdown form-dropdown" id="input_27_minuteSelect" name="q27_repeatEvery[minuteSelect]" data-component="time-minute" aria-labelledby="label_27 sublabel_27_minutes">
+                  <option>  </option>
+                  <option value="00"> 00 </option>
+                  <option value="01"> 01 </option>
+                  <option value="02"> 02 </option>
+                  <option value="03"> 03 </option>
+                  <option value="04"> 04 </option>
+                  <option value="05"> 05 </option>
+                  <option value="06"> 06 </option>
+                  <option value="07"> 07 </option>
+                  <option value="08"> 08 </option>
+                  <option value="09"> 09 </option>
+                  <option value="10"> 10 </option>
+                  <option value="11"> 11 </option>
+                  <option value="12"> 12 </option>
+                  <option value="13"> 13 </option>
+                  <option value="14"> 14 </option>
+                  <option value="15"> 15 </option>
+                  <option value="16"> 16 </option>
+                  <option value="17"> 17 </option>
+                  <option value="18"> 18 </option>
+                  <option value="19"> 19 </option>
+                  <option value="20"> 20 </option>
+                  <option value="21"> 21 </option>
+                  <option value="22"> 22 </option>
+                  <option value="23"> 23 </option>
+                  <option value="24"> 24 </option>
+                  <option value="25"> 25 </option>
+                  <option value="26"> 26 </option>
+                  <option value="27"> 27 </option>
+                  <option value="28"> 28 </option>
+                  <option value="29"> 29 </option>
+                  <option value="30"> 30 </option>
+                  <option value="31"> 31 </option>
+                  <option value="32"> 32 </option>
+                  <option value="33"> 33 </option>
+                  <option value="34"> 34 </option>
+                  <option value="35"> 35 </option>
+                  <option value="36"> 36 </option>
+                  <option value="37"> 37 </option>
+                  <option value="38"> 38 </option>
+                  <option value="39"> 39 </option>
+                  <option value="40"> 40 </option>
+                  <option value="41"> 41 </option>
+                  <option value="42"> 42 </option>
+                  <option value="43"> 43 </option>
+                  <option value="44"> 44 </option>
+                  <option value="45"> 45 </option>
+                  <option value="46"> 46 </option>
+                  <option value="47"> 47 </option>
+                  <option value="48"> 48 </option>
+                  <option value="49"> 49 </option>
+                  <option value="50"> 50 </option>
+                  <option value="51"> 51 </option>
+                  <option value="52"> 52 </option>
+                  <option value="53"> 53 </option>
+                  <option value="54"> 54 </option>
+                  <option value="55"> 55 </option>
+                  <option value="56"> 56 </option>
+                  <option value="57"> 57 </option>
+                  <option value="58"> 58 </option>
+                  <option value="59"> 59 </option>
+                </select>
+                <label class="form-sub-label" for="input_27_minuteSelect" id="sublabel_27_minutes" style="min-height:13px" aria-hidden="false"> Minutes </label>
+              </span>
+            </div>
+          </div>
+        </li>
+        <li class="form-line form-line-column form-col-1" data-type="control_dropdown" id="id_28">
+          <label class="form-label form-label-top" id="label_28" for="input_28"> Until </label>
+          <div id="cid_28" class="form-input-wide">
+            <select class="form-dropdown" id="input_28" name="q28_until" style="width:150px" data-component="dropdown" aria-labelledby="label_28">
+              <option value="Indefinitely"> Indefinitely </option>
+              <option value="Fixed Time"> Fixed Time </option>
+              <option value="Sunrise"> Sunrise </option>
+              <option value="Sunset"> Sunset </option>
+              <option value="Sunrise Civil"> Sunrise Civil </option>
+              <option value="Sunset Civil"> Sunset Civil </option>
+              <option value="Sunrise Nautical"> Sunrise Nautical </option>
+              <option value="Sunset Nautical"> Sunset Nautical </option>
+              <option value="Sunrise Astronomical"> Sunrise Astronomical </option>
+              <option value="Sunset Astronomical"> Sunset Astronomical </option>
+            </select>
+          </div>
+        </li>
+        <li class="form-line form-line-column form-col-2" data-type="control_time" id="id_29">
+          <label class="form-label form-label-top" id="label_29" for="input_29_hourSelect"> Until fixed time </label>
+          <div id="cid_29" class="form-input-wide">
+            <div data-wrapper-react="true">
+              <span class="form-sub-label-container" style="vertical-align:top">
+                <select class="time-dropdown form-dropdown" id="input_29_hourSelect" name="q29_untilFixed[hourSelect]" data-component="time-hour" aria-labelledby="label_29 sublabel_29_hour">
+                  <option>  </option>
+                  <option value="0"> 00 </option>
+                  <option value="1"> 01 </option>
+                  <option value="2"> 02 </option>
+                  <option value="3"> 03 </option>
+                  <option value="4"> 04 </option>
+                  <option value="5"> 05 </option>
+                  <option value="6"> 06 </option>
+                  <option value="7"> 07 </option>
+                  <option value="8"> 08 </option>
+                  <option value="9"> 09 </option>
+                  <option value="10"> 10 </option>
+                  <option value="11"> 11 </option>
+                  <option value="12"> 12 </option>
+                  <option value="13"> 13 </option>
+                  <option value="14"> 14 </option>
+                  <option value="15"> 15 </option>
+                  <option value="16"> 16 </option>
+                  <option value="17"> 17 </option>
+                  <option value="18"> 18 </option>
+                  <option value="19"> 19 </option>
+                  <option value="20"> 20 </option>
+                  <option value="21"> 21 </option>
+                  <option value="22"> 22 </option>
+                  <option value="23"> 23 </option>
+                </select>
+                <span class="date-separate">
+                   :
+                </span>
+                <label class="form-sub-label" for="input_29_hourSelect" id="sublabel_29_hour" style="min-height:13px" aria-hidden="false"> Hour </label>
+              </span>
+              <span class="form-sub-label-container" style="vertical-align:top">
+                <select class="time-dropdown form-dropdown" id="input_29_minuteSelect" name="q29_untilFixed[minuteSelect]" data-component="time-minute" aria-labelledby="label_29 sublabel_29_minutes">
+                  <option>  </option>
+                  <option value="00"> 00 </option>
+                  <option value="01"> 01 </option>
+                  <option value="02"> 02 </option>
+                  <option value="03"> 03 </option>
+                  <option value="04"> 04 </option>
+                  <option value="05"> 05 </option>
+                  <option value="06"> 06 </option>
+                  <option value="07"> 07 </option>
+                  <option value="08"> 08 </option>
+                  <option value="09"> 09 </option>
+                  <option value="10"> 10 </option>
+                  <option value="11"> 11 </option>
+                  <option value="12"> 12 </option>
+                  <option value="13"> 13 </option>
+                  <option value="14"> 14 </option>
+                  <option value="15"> 15 </option>
+                  <option value="16"> 16 </option>
+                  <option value="17"> 17 </option>
+                  <option value="18"> 18 </option>
+                  <option value="19"> 19 </option>
+                  <option value="20"> 20 </option>
+                  <option value="21"> 21 </option>
+                  <option value="22"> 22 </option>
+                  <option value="23"> 23 </option>
+                  <option value="24"> 24 </option>
+                  <option value="25"> 25 </option>
+                  <option value="26"> 26 </option>
+                  <option value="27"> 27 </option>
+                  <option value="28"> 28 </option>
+                  <option value="29"> 29 </option>
+                  <option value="30"> 30 </option>
+                  <option value="31"> 31 </option>
+                  <option value="32"> 32 </option>
+                  <option value="33"> 33 </option>
+                  <option value="34"> 34 </option>
+                  <option value="35"> 35 </option>
+                  <option value="36"> 36 </option>
+                  <option value="37"> 37 </option>
+                  <option value="38"> 38 </option>
+                  <option value="39"> 39 </option>
+                  <option value="40"> 40 </option>
+                  <option value="41"> 41 </option>
+                  <option value="42"> 42 </option>
+                  <option value="43"> 43 </option>
+                  <option value="44"> 44 </option>
+                  <option value="45"> 45 </option>
+                  <option value="46"> 46 </option>
+                  <option value="47"> 47 </option>
+                  <option value="48"> 48 </option>
+                  <option value="49"> 49 </option>
+                  <option value="50"> 50 </option>
+                  <option value="51"> 51 </option>
+                  <option value="52"> 52 </option>
+                  <option value="53"> 53 </option>
+                  <option value="54"> 54 </option>
+                  <option value="55"> 55 </option>
+                  <option value="56"> 56 </option>
+                  <option value="57"> 57 </option>
+                  <option value="58"> 58 </option>
+                  <option value="59"> 59 </option>
+                </select>
+                <label class="form-sub-label" for="input_29_minuteSelect" id="sublabel_29_minutes" style="min-height:13px" aria-hidden="false"> Minutes </label>
+              </span>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <ul class="form-section" id="section_35">
+        <li id="cid_35" class="form-input-wide" data-type="control_collapse">
+          <div class="form-collapse-table form-collapse-hidden" id="collapse_35" data-component="collapse">
+            <span class="form-collapse-mid" id="collapse-text_35">
+            </span>
+            <span class="form-collapse-right form-collapse-right-show">
+               
+            </span>
+          </div>
+        </li>
+        <li class="form-line" data-type="control_divider" id="id_36">
+          <div id="cid_36" class="form-input-wide">
+            <div data-component="divider" style="border-bottom:1px solid #e6e6e6;height:1px;margin-left:0px;margin-right:0px;margin-top:5px;margin-bottom:5px">
+            </div>
+          </div>
+        </li>
+        <li class="form-line" data-type="control_button" id="id_32">
+          <div id="cid_32" class="form-input-wide">
+            <div style="margin-left:156px" data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField">
+              <button id="input_32" type="submit" class="form-submit-button submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="" onclick="Save_clicked(event)">
+                Save Changes
+              </button>
+            </div>
+          </div>
+        </li>
+        <li class="form-line" data-type="control_button" id="id_38">
+          <div id="cid_38" class="form-input-wide">
+            <div style="margin-left:156px" data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField">
+              <button id="input_38" type="button" class="form-submit-button submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="" onclick="Delete_clicked(event)">
+                Delete Task
+              </button>
+            </div>
+          </div>
+        </li>
+        <li class="form-line" data-type="control_button" id="id_37">
+          <div id="cid_37" class="form-input-wide">
+            <div style="margin-left:156px" data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField">
+              <button id="input_37" type="button" class="form-submit-button submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="" onclick="location.href='index.html'">
+                Cancel
+              </button>
+            </div>
+          </div>
+        </li>
+        <li style="display:none">
+          Should be Empty:
+          <input type="text" name="website" value="" />
+		  <input type="hidden" id="redirect_page1" name="redirect_page" value="index.html">
+        </li>
+      </ul>
+  </div>
+  <script>
+  JotForm.showJotFormPowered = "new_footer";
+  </script>
+  <script>
+  JotForm.poweredByText = "Powered by JotForm";
+  </script>
+<script type="text/javascript">
+function Save_clicked(e)
+{
+    if(!confirm('Save changes?')) {
+        e.preventDefault();
+    }
+}
+function Delete_clicked(e)
+{
+    if(confirm('Are you sure you want to delete this task?')) {
+		var url_str = "index.html?COMMAND=SCH ";
+		url_str += document.getElementsByName("sch_id")[0].value;
+		url_str += " DELETE";
+        window.location.href = url_str;
+    }
+}
+</script>  
+  <input type="hidden" class="simple_spc" id="simple_spc" name="simple_spc" value="210336399962060" />
+  <script type="text/javascript">
+  var all_spc = document.querySelectorAll("form[id='210336399962060'] .si" + "mple" + "_spc");
+for (var i = 0; i < all_spc.length; i++)
+{
+  all_spc[i].value = "210336399962060-210336399962060";
+}
+  </script>
+  </form></body>
+</html>
+<script type="text/javascript">JotForm.ownerView=true;</script>
